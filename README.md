@@ -2,12 +2,12 @@
 ## Small Arduino Timezone library with POSIX TZ String support
 
 **TinyTZ** is a small Arduino library for handling timezones.
-It supports specifying timezone using POSIX TZ (IEEE 1003 String) format,
+It supports specifying timezone using POSIX TZ (IEEE 1003.1 String) format,
 thus making it easy to use DHCP to obtain Timezone and NTP to display
 correct local time...
 
-TinyTZ sets calls Arduingo (AVR) *set_zone()* and *set_dst()* functions
-to configure timezone (including Daylight Savings Time (DST))
+TinyTZ calls Arduingo (AVR) *set_zone()* and *set_dst()* functions
+to configure timezone (including Daylight Savings Time)
 to work with built-in functions from *time.h*.
 
 License: GPL3
@@ -80,6 +80,6 @@ void main(void)
 
 This library includes TZ string parser from GNU C Library (glibc) as well as new small footprint parser that uses some 2.5kB less flash (and some 40 bytes less SRAM)
 
-To select which parser to use edit *TINY_PARSER* definition in *TinyTZ.h*.  By default the new small parser is used/
+To select which parser to use edit *TINY_PARSER* definition in *TinyTZ.h*.  By default the new small parser is used...
 
 
