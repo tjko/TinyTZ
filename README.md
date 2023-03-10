@@ -15,7 +15,7 @@ License: GPL3
 
 ## Library Installation
 
-1. Download the ZIP file (rename it to "WireScan.zip" if needed)
+1. Download the ZIP file (rename it to "TinyTZ.zip" if needed)
 2. From the Arduino IDE select: Scketch -> Include Library... -> Add .ZIP Library...
 3. Restart the IDE to see new library "TinyTZ" and examples for it
 
