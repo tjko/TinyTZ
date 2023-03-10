@@ -54,7 +54,7 @@ long __parse_TZ_offset(char *str, int *hours, int *mins, int *secs) {
   }
 
   o = labs(*hours)*3600 + labs(*mins)*60 + labs(*secs);
-  return ((hours < 0 ? 1 : -1) * o);
+  return ((*hours < 0 ? 1 : -1) * o);
 }
 
 
@@ -157,8 +157,10 @@ int __parse_TZ_string(const char *str) {
       }
 
       s = strtok_r(NULL, separator2, &saveptr2);
-      if (!s) return -13;
-      tz_rules[i].secs = labs( __parse_TZ_offset(s, &hours, &mins, &secs));
+      if (s)
+	      tz_rules[i].secs = labs( __parse_TZ_offset(s, &hours, &mins, &secs));
+      else
+	      tz_rules[i].secs = 7200;
     }
 
     
